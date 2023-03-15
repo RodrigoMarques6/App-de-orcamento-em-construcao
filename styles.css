@@ -19,7 +19,37 @@ body {
 }
 
 /* Main */
+
 .div1-main {
+    color: violet;
+    margin: auto;
+    padding: 1.5%;
+    max-width: 50%;
+    text-align: center;
+    font-size: 1.5vw;
+    border-top: 1px solid violet;
+    border-left: 1px solid violet;
+    border-right: 1px solid violet;
+    border-radius: 6px;
+}
+.div2-main {
+    color: violet;
+    margin: auto;
+    padding: 5%;
+    max-width: 50%;
+    max-height: 15%;    
+    border-bottom: 1px solid violet;
+    border-left: 1px solid violet;
+    border-right: 1px solid violet;
+    border-radius: 6px;
+}
+
+.p1-main {
+    color: violet;
+    font-size: 1.2vw;
+}
+
+.div3-main {
     color: violet;
     background-color: rgb(139, 93, 36);
     margin: auto;
@@ -28,7 +58,7 @@ body {
     text-align: center;
     font-size: 1.5vw;
 }
-.div2-main {
+.div4-main {
     color: violet;
     background-color: bisque;
     margin: auto;
@@ -37,4 +67,8 @@ body {
     max-height: 15%;
 }
 
+.p2-main {
+    color: violet;
+    font-size: 1.2vw;
+}
 /* Footer */
