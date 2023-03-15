@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'open sans', sans-serif;
+    background-color: #00131c;
+}
+
+/* Header */
+
+.h1-header {
+    color: violet;
+    text-align: center;
+    padding: 2%;
+}
+
+/* Main */
+.div1-main {
+    color: violet;
+}
+
+/* Footer */
