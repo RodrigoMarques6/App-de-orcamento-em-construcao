@@ -1,74 +1,121 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'open sans', sans-serif;
-    background-color: #00131c;
+  font-family: "open sans", sans-serif;
+  background: linear-gradient(#022f44, rgb(61, 0, 61));
+  height: 100vh;
 }
 
 /* Header */
 
 .h1-header {
-    color: violet;
-    text-align: center;
-    padding: 2%;
-    font-size: 2.5vw;
+  color: violet;
+  text-align: center;
+  padding: 2%;
+  font-size: 2.5vw;
 }
 
 /* Main */
 
-.div1-main {
-    color: violet;
-    margin: auto;
-    padding: 1.5%;
-    max-width: 50%;
-    text-align: center;
-    font-size: 1.5vw;
-    border-top: 1px solid violet;
-    border-left: 1px solid violet;
-    border-right: 1px solid violet;
-    border-radius: 6px;
-}
-.div2-main {
-    color: violet;
-    margin: auto;
-    padding: 5%;
-    max-width: 50%;
-    max-height: 15%;    
-    border-bottom: 1px solid violet;
-    border-left: 1px solid violet;
-    border-right: 1px solid violet;
-    border-radius: 6px;
+.div-economico, .div-antecipado {
+  border: 1px solid violet;
+  border-radius: 7px;
+  max-width: 50%;
+  margin: auto;
+  margin-bottom: 3%;
 }
 
-.p1-main {
-    color: violet;
-    font-size: 1.2vw;
+.div1-main {
+  color: violet;
+  margin: auto;
+  padding: 1.5%;
+  /* max-width: 50%; */
+  text-align: center;
+  font-size: 1.5vw;
+}
+.div2-main {
+  color: violet;
+  margin: auto;
+  padding: 5%;
+  /* max-width: 50%; */
+  max-height: 15%;
+  text-align: center;
+}
+
+.p1-main, .p2-main {
+  color: violet;
+  font-size: 1.2vw;
 }
 
 .div3-main {
-    color: violet;
-    background-color: rgb(139, 93, 36);
-    margin: auto;
-    padding: 1.5%;
-    max-width: 50%;
-    text-align: center;
-    font-size: 1.5vw;
+  color: violet;
+  margin: auto;
+  padding: 1.5%;
+  /* max-width: 50%; */
+  text-align: center;
+  font-size: 1.5vw;
 }
 .div4-main {
-    color: violet;
-    background-color: bisque;
-    margin: auto;
-    padding: 5%;
-    max-width: 50%;
-    max-height: 15%;
+  color: violet;
+  margin: auto;
+  padding: 5%;
+  /* max-width: 50%; */
+  max-height: 15%;
+  text-align: center;
 }
 
-.p2-main {
-    color: violet;
-    font-size: 1.2vw;
+.legend-economico, .legend-antecipado {
+  margin-bottom: 1.5%;
+  font-weight: bold;
 }
+
+.input-economico, .input-antecipado {
+  font-size: 1.5vw;
+  background-color: rgb(117, 8, 117);
+  border: 1px solid violet;
+  border-radius: 20px;
+  padding: 1.5%;
+  cursor: pointer;
+  color: bisque;
+  text-align: center;
+  max-width: 30%;
+  margin-bottom: 2%;
+}
+
+.input-economico:focus,
+.input-antecipado:focus {
+  color: bisque;
+  outline: 0;
+  border: 1px solid bisque;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.btn-economico, .btn-antecipado {
+    font-size: 1.5vw;
+    background-color: #022f44;;
+    border: 1px solid violet;
+    border-radius: 20px;
+    padding: 1.5%;
+    cursor: pointer;
+    color: bisque;
+    text-align: center;
+    max-width: 30%;
+}
+
+.btn-economico:hover, .btn-antecipado:hover {
+    background-color: rgb(117, 8, 117);
+    border: 1px solid rgb(117, 8, 117);
+}
+
 /* Footer */
