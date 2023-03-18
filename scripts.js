@@ -1,25 +1,26 @@
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM funcionando perfeitamente.')
-})
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM funcionando perfeitamente.");
+});
 
-const inputEconomico = document.getElementById('input-economico');
-const inputAntecipado = document.getElementById('input-antecipado');
-const btnEconomico = document.getElementById('btn-economico');
-const btnAntecipado = document.getElementById('btn-antecipado');
-
-
+const inputEconomico = document.getElementById("input-economico");
+const inputAntecipado = document.getElementById("input-antecipado");
+const btnEconomico = document.getElementById("btn-economico");
+const btnAntecipado = document.getElementById("btn-antecipado");
+const divEconomico = document.getElementById("div-economico");
+const dialog = document.querySelector('dialog');
 
 btnEconomico.onclick = function createTableOfValues() {
+  addOnDialog();
+  showModal();
+};
 
-
-
-    retiraDivEconomico()
+function showModal () {
+    dialog.showModal();
 }
 
-function retiraDivEconomico () {
-    const divEconomico = document.getElementById('div-economico')
-    // divEconomico.style.display = 'none'
-    divEconomico.innerHTML = `<table>
+function addOnDialog() {
+  const onDialog = document.getElementById('dialog-economico');
+  onDialog.innerHTML = `<table>
     <thead>
         <th>Modalidade</th>
         <th>Taxa</th>
@@ -49,6 +50,5 @@ function retiraDivEconomico () {
         <td value=""></td>
         <td value=""></td>
     </tbody>
-    <tfoot></tfoot>`
+    <tfoot></tfoot>`;
 }
-
