@@ -19,36 +19,90 @@ function showModal () {
 }
 
 function addOnDialog() {
-  const onDialog = document.getElementById('dialog-economico');
-  onDialog.innerHTML = `<table>
+  const onDialog = document.getElementById('table-dialog-economico');
+  onDialog.innerHTML = `
     <thead>
         <th>Modalidade</th>
         <th>Taxa</th>
-        <th>Você recebe</th>
-        <th>Para o cliente</th>
-
+        <th>Receba no total</th>
+        <th>Receba por mês</th>
+        <th>Seu cliente paga</th>
     </thead>
     <tbody>
         <td>Débito</td>
-        <td>1,90%</td>
+        <td>1,9%</td>
         <td value=""></td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
-    <tfoot></tfoot><table>
-    <thead>
-        <th>Modalidade</th>
-        <th>Taxa</th>
-        <th>Você recebe</th>
-        <th>Para o cliente</th>
-
-    </thead>
     <tbody>
-        <td>Débito</td>
-        <td>1,90%</td>
+        <td>Crédito (1x)</td>
+        <td>3,0%</td>
         <td value=""></td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
-    <tfoot></tfoot>`;
-}
+    <tbody>
+        <td>Crédito (2x)</td>
+        <td>4,3%</td>
+        <td value=""></td>
+        <td value=""></td>
+        <td value=""></td>
+    </tbody>
+    <tbody>
+        <td>Crédito (3x)</td>
+        <td>4,3%</td>
+        <td value=""></td>
+        <td value=""></td>
+        <td value=""></td>
+    </tbody>
+    <tbody>
+        <td>Crédito (4x)</td>
+        <td>4,3%</td>
+        <td value=""></td>
+        <td value=""></td>
+        <td value=""></td>
+    </tbody>
+    <tbody>
+        <td>Crédito (5x)</td>
+        <td>4,3%</td>
+        <td value=""></td>
+        <td value=""></td>
+        <td value=""></td>
+    </tbody>
+    <tbody>
+        <td>Crédito (6x)</td>
+        <td>4,3%</td>
+        <td value=""></td>
+        <td value=""></td>
+        <td value=""></td>
+    </tbody>
+    <tbody>
+        <td>Crédito (7x)</td>
+        <td>4,3%</td>
+        <td value=""></td>
+        <td value=""></td>
+        <td value=""></td>
+    </tbody>
+    <tbody>
+        <td>Crédito (8x)</td>
+        <td>4,3%</td>
+        <td value=""></td>
+        <td value=""></td>
+        <td value=""></td>
+    </tbody>
+    <tbody>
+        <td>Crédito (9x)</td>
+        <td>4,3%</td>
+        <td value=""></td>
+        <td value=""></td>
+        <td value=""></td>
+    </tbody>
+    <tbody>
+        <td>Crédito (10x)</td>
+        <td>4,3%</td>
+        <td value=""></td>
+        <td value=""></td>
+        <td value=""></td>
+    </tbody>`;
+};
