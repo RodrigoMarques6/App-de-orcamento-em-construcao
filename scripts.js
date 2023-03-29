@@ -8,11 +8,19 @@ const btnEconomico = document.getElementById("btn-economico");
 const btnAntecipado = document.getElementById("btn-antecipado");
 const divEconomico = document.getElementById("div-economico");
 const dialog = document.querySelector('dialog');
+const ativar = document.getElementById('ativar');
+const dialogEconomico = document.getElementById('dialog-economico')
+
+
 
 btnEconomico.onclick = function createTableOfValues() {
   addOnDialog();
   showModal();
 };
+
+ativar.addEventListener('click', function () {
+    dialogEconomico.classList.toggle('animar')
+})
 
 function showModal () {
     dialog.showModal();
@@ -106,3 +114,5 @@ function addOnDialog() {
         <td value=""></td>
     </tbody>`;
 };
+
+
