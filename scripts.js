@@ -17,6 +17,7 @@ function createTableOfValues () {
         addTableOnDialog();
         addButtonOnDialog();
         calculaDebitoEconomico();
+        calculaCredito1x();
     })
 };
 
@@ -57,8 +58,8 @@ function addTableOnDialog() {
     </tbody>
     <tbody>
         <td>Crédito (1x)</td>
-        <td>3,0%</td>
-        <th></th>
+        <td>3,7%</td>
+        <th>${calculaCredito1x.innerHTML = `R$ ` + calculaCredito1x()}</th>
         <td value=""></td>
         <td value=""></td>
         <td value=""></td>
@@ -145,6 +146,15 @@ function calculaDebitoEconomico () {
     return retorna.toFixed(2);
 }
 
-// inputEconomico.value * (1,9 / 100)
+function calculaCredito1x () {
+    const inputEconomico = document.getElementById('input-economico');
+    const retorna = inputEconomico.value * (3.7 / 100);
+    return retorna.toFixed(2);
+}
+
+function calculaCredito2xA12x () {
+    // Pensar aqui em utilizar uma estrutura de repetição
+}
+
 
 
