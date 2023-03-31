@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM funcionando perfeitamente.");
 });
 
-const inputEconomico = document.getElementById("input-economico");
 const inputAntecipado = document.getElementById("input-antecipado");
 const btnEconomico = document.getElementById("btn-economico");
 const btnAntecipado = document.getElementById("btn-antecipado");
@@ -12,12 +11,22 @@ const ativar = document.getElementById('ativar');
 const dialogEconomico = document.getElementById('dialog-economico')
 
 function createTableOfValues () {
-    btnEconomico.addEventListener('click', function () {
-        addOnDialog();
+    btnEconomico.addEventListener('click', function() {
         showModal();
         animation();
+        addTableOnDialog();
+        addButtonOnDialog();
+        calculaDebitoEconomico();
     })
 };
+
+
+setTimeout(() => {
+    createTableOfValues();
+
+}, 3000);
+
+
 
 function animation () {
     dialogEconomico.classList.toggle('animar')
@@ -27,12 +36,13 @@ function showModal () {
     dialog.showModal();
 }
 
-function addOnDialog() {
+function addTableOnDialog() {
   const onDialog = document.getElementById('table-dialog-economico');
   onDialog.innerHTML = `
     <thead>
         <th>Modalidade</th>
         <th>Taxa</th>
+        <th>Desconto</th>
         <th>Receba no total</th>
         <th>Receba por mês</th>
         <th>Seu cliente paga</th>
@@ -40,6 +50,7 @@ function addOnDialog() {
     <tbody>
         <td>Débito</td>
         <td>1,9%</td>
+        <th>${calculaDebitoEconomico.innerHTML = `R$ ` + calculaDebitoEconomico()}</th>
         <td value=""></td>
         <td value=""></td>
         <td value=""></td>
@@ -47,6 +58,7 @@ function addOnDialog() {
     <tbody>
         <td>Crédito (1x)</td>
         <td>3,0%</td>
+        <th></th>
         <td value=""></td>
         <td value=""></td>
         <td value=""></td>
@@ -116,7 +128,23 @@ function addOnDialog() {
     </tbody>`;
 };
 
-setInterval(function () {
-    createTableOfValues();
-}, 2000)
+function addButtonOnDialog () {
+    const addButtonOnDialog = document.getElementById('div-dialog-economico');
+    addButtonOnDialog.innerHTML = `<button>Voltar</button>`
+}
+
+// Parte dos cálculos:
+
+function calculaDebitoEconomico () {
+    const inputEconomico = document.getElementById('input-economico');
+    // const valueDebito = document.getElementById('value-debito');
+    // const valueOfInput = parseInt(inputEconomico.value);
+    // const valueOfDebito = parseInt(valueDebito);
+    // console.log(valueOfInput * valueOfDebito)
+    const retorna = inputEconomico.value * (1.9 / 100);
+    return retorna.toFixed(2);
+}
+
+// inputEconomico.value * (1,9 / 100)
+
 
