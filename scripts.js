@@ -1,21 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOM funcionando perfeitamente.");
+    console.log("DOM funcionando perfeitamente.");
 });
 
 const inputAntecipado = document.getElementById("input-antecipado");
 const btnEconomico = document.getElementById("btn-economico");
 const btnAntecipado = document.getElementById("btn-antecipado");
 const divEconomico = document.getElementById("div-economico");
-const dialog = document.querySelector('dialog');
+// const dialog = document.querySelector('dialog');
 const ativar = document.getElementById('ativar');
 const dialogEconomico = document.getElementById('dialog-economico')
 
-function createTableOfValues () {
-    btnEconomico.addEventListener('click', function() {
+
+function createTableOfValues() {
+    btnEconomico.addEventListener('click', function () {
         showModal();
         animation();
         addTableOnDialog();
-        addButtonOnDialog();
+        addButtonBackOnDialog();
+        addButtonModelOnDialogAndAddModel();
         calculaDebitoEconomico();
         calculaCredito1x();
     })
@@ -25,21 +27,21 @@ function createTableOfValues () {
 setTimeout(() => {
     createTableOfValues();
 
-}, 3000);
+}, 1000);
 
 
 
-function animation () {
+function animation() {
     dialogEconomico.classList.toggle('animar')
 }
 
-function showModal () {
-    dialog.showModal();
+function showModal() {
+    dialogEconomico.showModal();
 }
 
 function addTableOnDialog() {
-  const onDialog = document.getElementById('table-dialog-economico');
-  onDialog.innerHTML = `
+    const onDialog = document.getElementById('table-dialog-economico');
+    onDialog.innerHTML = `
     <thead>
         <th>Modalidade</th>
         <th>Taxa</th>
@@ -129,14 +131,47 @@ function addTableOnDialog() {
     </tbody>`;
 };
 
-function addButtonOnDialog () {
-    const addButtonOnDialog = document.getElementById('div-dialog-economico');
-    addButtonOnDialog.innerHTML = `<button>Voltar</button>`
+function addButtonBackOnDialog() {
+    const pegaDiv1DialogEconomico = document.getElementById('div1-dialog-economico');
+    const buttonBackOnDialog = document.createElement('button');
+    buttonBackOnDialog.textContent = 'Voltar';
+    buttonBackOnDialog.id = 'btn-voltar'
+    pegaDiv1DialogEconomico.appendChild(buttonBackOnDialog);
+}
+
+function addButtonModelOnDialogAndAddModel() {
+    const pegaDiv2DialogEconomico = document.getElementById('div2-dialog-economico');
+    const buttonModelOnDialog = document.createElement('button');
+    buttonModelOnDialog.textContent = 'Abrir modelo';
+    buttonModelOnDialog.id = 'btn-abrir-modelo';
+    pegaDiv2DialogEconomico.appendChild(buttonModelOnDialog);
+
+    buttonModelOnDialog.addEventListener('click', function () {
+        showModal2();
+        addConteudoNaDiv1();
+        addConteudoNaDiv2();
+    })
+
+    function showModal2() {
+        const dialogModelo = document.getElementById('dialog-modelo')
+        dialogModelo.showModal();
+    }
+
+    function addConteudoNaDiv1 () {
+        const div1DialogModelo = document.getElementById('div1-dialog-modelo');
+        const inputEconomico = document.getElementById('input-economico');
+        div1DialogModelo.innerHTML = `<p>Valor do projeto: R$ ${inputEconomico.value} Em até 10x no cartão de crédito</p>`;
+    }
+
+    function addConteudoNaDiv2() {
+        const div2DialogModelo = document.getElementById('div2-dialog-modelo');
+        div2DialogModelo.innerHTML = `<p>Ou VALOR à vista, com 10% de desconto já aplicado. Pago inteiro por boleto bancário ou transferência.</p>`;
+    }
 }
 
 // Parte dos cálculos:
 
-function calculaDebitoEconomico () {
+function calculaDebitoEconomico() {
     const inputEconomico = document.getElementById('input-economico');
     // const valueDebito = document.getElementById('value-debito');
     // const valueOfInput = parseInt(inputEconomico.value);
@@ -146,15 +181,14 @@ function calculaDebitoEconomico () {
     return retorna.toFixed(2);
 }
 
-function calculaCredito1x () {
+function calculaCredito1x() {
     const inputEconomico = document.getElementById('input-economico');
     const retorna = inputEconomico.value * (3.7 / 100);
     return retorna.toFixed(2);
 }
 
-function calculaCredito2xA12x () {
+function calculaCredito2xA12x() {
     // Pensar aqui em utilizar uma estrutura de repetição
 }
-
 
 

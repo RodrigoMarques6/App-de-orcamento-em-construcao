@@ -182,4 +182,60 @@ input[type="number"] {
   display: none;
 }
 
+/* DIVs dos botões dentro do Dialog */
+.divPaiDoDialogEconomico {
+  /* background-color: firebrick; */
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  justify-content: space-between;
+}
+
+.div1-dialog-economico {
+  /* background-color: bisque; */
+  width: 49%;
+}
+
+.div2-dialog-economico {
+  /* background-color: burlywood; */
+  width: 49%;
+}
+
+#btn-voltar, #btn-abrir-modelo {
+  font-size: 1.5vw;
+    background-color: #022f44;;
+    border: 1px solid violet;
+    border-radius: 10px;
+    padding: 1.5%;
+    cursor: pointer;
+    color: bisque;
+    text-align: center;
+    width: 100%;
+    min-width: 30%;
+}
+
+#btn-abrir-modelo:hover, #btn-voltar:hover {
+  background-color: rgb(117, 8, 117);
+  border: 1px solid #8fb9aa;
+}
+
+
+/* DIV do modelo de orçamento */
+
+.div-modelo-orçamento {
+  border: 2px solid rgb(243, 193, 136);
+
+}
+
+.dialog-modelo {
+  background-color: bisque;
+  margin: auto;
+  border: 2px solid violet;
+  border-radius: 10px;
+  width: 70%;
+  height: 90%;
+}
+
+
+
 /* Footer */
