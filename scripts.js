@@ -62,72 +62,86 @@ function addTableOnDialog() {
         <td>Crédito (1x)</td>
         <td>3,7%</td>
         <th>${calculaCredito1x.innerHTML = `R$ ` + calculaCredito1x()}</th>
-        <td value=""></td>
+        <td></td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
     <tbody>
         <td>Crédito (2x)</td>
-        <td>4,3%</td>
-        <td value=""></td>
+        <td>4,9%</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
     <tbody>
         <td>Crédito (3x)</td>
-        <td>4,3%</td>
-        <td value=""></td>
+        <td>4,9%</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
     <tbody>
         <td>Crédito (4x)</td>
-        <td>4,3%</td>
-        <td value=""></td>
+        <td>4,9%</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
     <tbody>
         <td>Crédito (5x)</td>
-        <td>4,3%</td>
-        <td value=""></td>
+        <td>4,9%</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
     <tbody>
         <td>Crédito (6x)</td>
-        <td>4,3%</td>
-        <td value=""></td>
+        <td>4,9%</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
     <tbody>
         <td>Crédito (7x)</td>
-        <td>4,3%</td>
-        <td value=""></td>
+        <td>4,9%</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
     <tbody>
         <td>Crédito (8x)</td>
-        <td>4,3%</td>
-        <td value=""></td>
+        <td>4,9%</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
     <tbody>
         <td>Crédito (9x)</td>
-        <td>4,3%</td>
-        <td value=""></td>
+        <td>4,9%</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
     <tbody>
         <td>Crédito (10x)</td>
-        <td>4,3%</td>
+        <td>4,9%</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
+    </tbody>
+    <tbody>
+        <td>Crédito (11x)</td>
+        <td>4,9%</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td value=""></td>
+        <td value=""></td>
+    </tbody>
+    <tbody>
+    <td>Crédito (11x)</td>
+    <td>4,9%</td>
+    <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+    <td value=""></td>
+    <td value=""></td>
     </tbody>`;
 };
 
@@ -157,7 +171,7 @@ function addButtonModelOnDialogAndAddModel() {
         dialogModelo.showModal();
     }
 
-    function addConteudoNaDiv1 () {
+    function addConteudoNaDiv1() {
         const div1DialogModelo = document.getElementById('div1-dialog-modelo');
         const inputEconomico = document.getElementById('input-economico');
         div1DialogModelo.innerHTML = `<p>Valor do projeto: R$ ${inputEconomico.value} Em até 10x no cartão de crédito</p>`;
@@ -183,11 +197,14 @@ function calculaDebitoEconomico() {
 
 function calculaCredito1x() {
     const inputEconomico = document.getElementById('input-economico');
-    const retorna = inputEconomico.value * (3.7 / 100);
-    return retorna.toFixed(2);
+    const retorna1x = inputEconomico.value * (3.7 / 100);
+    return retorna1x.toFixed(2);
 }
 
 function calculaCredito2xA12x() {
+    const inputEconomico = document.getElementById('input-economico');
+    const retorna2x12x = inputEconomico.value * (4.9 / 100);
+    return retorna2x12x.toFixed(2);
     // Pensar aqui em utilizar uma estrutura de repetição
 }
 
