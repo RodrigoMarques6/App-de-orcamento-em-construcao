@@ -236,6 +236,12 @@ input[type="number"] {
   height: 90%;
 }
 
+#div4OnDialogModelo {
+  background-color: rgb(89, 136, 35);
+  width: 200px;
+  height: 200px;
+}
+
 
 
 /* Footer */

@@ -164,48 +164,61 @@ function addButtonModelOnDialogAndAddModel() {
         showModal2();
         addConteudoNaDiv1();
         addConteudoNaDiv2();
-    })
+        addConteudoNaDiv3();
+        addConteudoNaDiv4();
+    });
 
     function showModal2() {
         const dialogModelo = document.getElementById('dialog-modelo')
         dialogModelo.showModal();
-    }
+    };
 
     function addConteudoNaDiv1() {
         const div1DialogModelo = document.getElementById('div1-dialog-modelo');
         const inputEconomico = document.getElementById('input-economico');
         div1DialogModelo.innerHTML = `<p>Valor do projeto: R$ ${inputEconomico.value} Em até 10x no cartão de crédito</p>`;
-    }
+    };
 
     function addConteudoNaDiv2() {
         const div2DialogModelo = document.getElementById('div2-dialog-modelo');
         div2DialogModelo.innerHTML = `<p>Ou VALOR à vista, com 10% de desconto já aplicado. Pago inteiro por boleto bancário ou transferência.</p>`;
+    };
+
+    function addConteudoNaDiv3() {
+        const div3DialogModelo = document.getElementById('div3-dialog-modelo');
+        div3DialogModelo.innerHTML = `<p>OU, se preferir, podemos optar pela realização do pagamento por boleto bancário realizado por iniciação de etapas. Nesse caso não há a opção de cartão de crédito, e o andamento do serviço só é continuado com a demonstração do comprovante de pagamento quando você puder realizá-lo. Enquanto isso, o projeto é pausado na última etapa que foi paga. A vantagem dessa modalidade é que você pode R$1800,00 (com 5% de controlar o seu tempo de pagamento. O valor nesse caso ficaria por desconto já aplicado), dividido em 3 etapas/parcelas. Conforme abaixo:</p>`;
+    };
+
+        function addConteudoNaDiv4() {
+            const pegaDiv4DialogModelo = document.getElementById('div4-dialog-modelo');
+            const div4OnDialogModelo = document.createElement('div');
+            div4OnDialogModelo.textContent = '1º Parcela – 10% do valor total';
+            div4OnDialogModelo.id = 'div4OnDialogModelo';
+            pegaDiv4DialogModelo.appendChild(div4OnDialogModelo);
+        }
     }
-}
 
-// Parte dos cálculos:
+    // Parte dos cálculos:
 
-function calculaDebitoEconomico() {
-    const inputEconomico = document.getElementById('input-economico');
-    // const valueDebito = document.getElementById('value-debito');
-    // const valueOfInput = parseInt(inputEconomico.value);
-    // const valueOfDebito = parseInt(valueDebito);
-    // console.log(valueOfInput * valueOfDebito)
-    const retorna = inputEconomico.value * (1.9 / 100);
-    return retorna.toFixed(2);
-}
+    function calculaDebitoEconomico() {
+        const inputEconomico = document.getElementById('input-economico');
+        // const valueDebito = document.getElementById('value-debito');
+        // const valueOfInput = parseInt(inputEconomico.value);
+        // const valueOfDebito = parseInt(valueDebito);
+        // console.log(valueOfInput * valueOfDebito)
+        const retorna = inputEconomico.value * (1.9 / 100);
+        return retorna.toFixed(2);
+    }
 
-function calculaCredito1x() {
-    const inputEconomico = document.getElementById('input-economico');
-    const retorna1x = inputEconomico.value * (3.7 / 100);
-    return retorna1x.toFixed(2);
-}
+    function calculaCredito1x() {
+        const inputEconomico = document.getElementById('input-economico');
+        const retorna1x = inputEconomico.value * (3.7 / 100);
+        return retorna1x.toFixed(2);
+    }
 
-function calculaCredito2xA12x() {
-    const inputEconomico = document.getElementById('input-economico');
-    const retorna2x12x = inputEconomico.value * (4.9 / 100);
-    return retorna2x12x.toFixed(2);
-    // Pensar aqui em utilizar uma estrutura de repetição
-}
-
-
+    function calculaCredito2xA12x() {
+        const inputEconomico = document.getElementById('input-economico');
+        const retorna2x12x = inputEconomico.value * (4.9 / 100);
+        return retorna2x12x.toFixed(2);
+        // Pensar aqui em utilizar uma estrutura de repetição
+    }
