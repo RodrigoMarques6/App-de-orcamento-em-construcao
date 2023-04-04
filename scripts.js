@@ -162,63 +162,110 @@ function addButtonModelOnDialogAndAddModel() {
 
     buttonModelOnDialog.addEventListener('click', function () {
         showModal2();
-        addConteudoNaDiv1();
-        addConteudoNaDiv2();
-        addConteudoNaDiv3();
-        addConteudoNaDiv4();
+        addConteudoNaDiv1Economico();
+        addConteudoNaDiv2Economico();
+        addConteudoNaDiv3Economico();
+        addDiv1EconomicoNaDiv4Economico();
+        addDiv2EconomicoNaDiv4Economico();
+        addDiv3EconomicoNaDiv4Economico();
+        addDiv1EconomicoNaDiv5Economico();
+        addDiv2EconomicoNaDiv5Economico();
+        addDiv3EconomicoNaDiv5Economico();
     });
 
     function showModal2() {
-        const dialogModelo = document.getElementById('dialog-modelo')
-        dialogModelo.showModal();
+        const dialogModeloEconomico = document.getElementById('dialog-modelo-economico')
+        dialogModeloEconomico.showModal();
     };
 
-    function addConteudoNaDiv1() {
-        const div1DialogModelo = document.getElementById('div1-dialog-modelo');
+    function addConteudoNaDiv1Economico() {
+        const div1DialogModeloEconomico = document.getElementById('div1-dialog-modelo-economico');
         const inputEconomico = document.getElementById('input-economico');
-        div1DialogModelo.innerHTML = `<p>Valor do projeto: R$ ${inputEconomico.value} Em até 10x no cartão de crédito</p>`;
+        div1DialogModeloEconomico.innerHTML = `<p>Valor do projeto: R$ ${inputEconomico.value} Em até 10x no cartão de crédito</p>`;
     };
 
-    function addConteudoNaDiv2() {
-        const div2DialogModelo = document.getElementById('div2-dialog-modelo');
-        div2DialogModelo.innerHTML = `<p>Ou VALOR à vista, com 10% de desconto já aplicado. Pago inteiro por boleto bancário ou transferência.</p>`;
+    function addConteudoNaDiv2Economico() {
+        const div2DialogModeloEconomico = document.getElementById('div2-dialog-modelo-economico');
+        const inputEconomico = document.getElementById('input-economico');
+        div2DialogModeloEconomico.innerHTML = `<p>Ou ${inputEconomico.value * 0.9} à vista, com 10% de desconto já aplicado. Pago inteiro por boleto bancário ou transferência.</p>`;
     };
 
-    function addConteudoNaDiv3() {
-        const div3DialogModelo = document.getElementById('div3-dialog-modelo');
-        div3DialogModelo.innerHTML = `<p>OU, se preferir, podemos optar pela realização do pagamento por boleto bancário realizado por iniciação de etapas. Nesse caso não há a opção de cartão de crédito, e o andamento do serviço só é continuado com a demonstração do comprovante de pagamento quando você puder realizá-lo. Enquanto isso, o projeto é pausado na última etapa que foi paga. A vantagem dessa modalidade é que você pode R$1800,00 (com 5% de controlar o seu tempo de pagamento. O valor nesse caso ficaria por desconto já aplicado), dividido em 3 etapas/parcelas. Conforme abaixo:</p>`;
+    function addConteudoNaDiv3Economico() {
+        const div3DialogModeloEconomico = document.getElementById('div3-dialog-modelo-economico');
+        const inputEconomico = document.getElementById('input-economico');
+        div3DialogModeloEconomico.innerHTML = `<p>OU, se preferir, podemos optar pela realização do pagamento por boleto bancário realizado por iniciação de etapas. Nesse caso não há a opção de cartão de crédito, e o andamento do serviço só é continuado com a demonstração do comprovante de pagamento quando você puder realizá-lo. Enquanto isso, o projeto é pausado na última etapa que foi paga. A vantagem dessa modalidade é que você pode controlar o seu tempo de pagamento. O valor nesse caso ficaria por R$${inputEconomico.value * 0.95}, (com 5% de desconto já aplicado), dividido em 3 etapas/parcelas. Conforme abaixo:</p>`;
     };
 
-        function addConteudoNaDiv4() {
-            const pegaDiv4DialogModelo = document.getElementById('div4-dialog-modelo');
-            const div4OnDialogModelo = document.createElement('div');
-            div4OnDialogModelo.textContent = '1º Parcela – 10% do valor total';
-            div4OnDialogModelo.id = 'div4OnDialogModelo';
-            pegaDiv4DialogModelo.appendChild(div4OnDialogModelo);
-        }
-    }
+    function addDiv1EconomicoNaDiv4Economico() {
+        const pegaDiv4DialogModeloEconomico = document.getElementById('div4-dialog-modelo-economico');
+        const div1EconomicoOnDiv4DialogModeloEconomico = document.createElement('div');
+        div1EconomicoOnDiv4DialogModeloEconomico.textContent = '1º Parcela – 10% do valor total';
+        div1EconomicoOnDiv4DialogModeloEconomico.id = 'div1EconomicoOnDiv4DialogModeloEconomico';
+        pegaDiv4DialogModeloEconomico.appendChild(div1EconomicoOnDiv4DialogModeloEconomico);
+    };
 
-    // Parte dos cálculos:
+    function addDiv2EconomicoNaDiv4Economico() {
+        const pegaDiv4DialogModeloEconomico = document.getElementById('div4-dialog-modelo-economico');
+        const div2EconomicoOnDiv4DialogModeloEconomico = document.createElement('div');
+        div2EconomicoOnDiv4DialogModeloEconomico.textContent = 'Aprovando este orçamento, o cliente deve efetuar o pagamento da primeira parcela para início da etapa 01: visita ao local para levantamento de medidas e reunião para assinaturas do contrato de prestação de serviço. Ressalta-se que o referido contrato será enviado ao cliente antes desta etapa 01, onde poderá fazer o reconhecimento das cláusulas constantes no mesmo.';
+        div2EconomicoOnDiv4DialogModeloEconomico.id = 'div2EconomicoOnDiv4DialogModeloEconomico';
+        pegaDiv4DialogModeloEconomico.appendChild(div2EconomicoOnDiv4DialogModeloEconomico);
+    };
 
-    function calculaDebitoEconomico() {
-        const inputEconomico = document.getElementById('input-economico');
-        // const valueDebito = document.getElementById('value-debito');
-        // const valueOfInput = parseInt(inputEconomico.value);
-        // const valueOfDebito = parseInt(valueDebito);
-        // console.log(valueOfInput * valueOfDebito)
-        const retorna = inputEconomico.value * (1.9 / 100);
-        return retorna.toFixed(2);
-    }
+    function addDiv3EconomicoNaDiv4Economico() {
+        const pegaDiv4DialogModeloEconomico = document.getElementById('div4-dialog-modelo-economico');
+        const div3EconomicoOnDiv4DialogModeloEconomico = document.createElement('div');
+        div3EconomicoOnDiv4DialogModeloEconomico.textContent = `${1800/2}`;
+        div3EconomicoOnDiv4DialogModeloEconomico.id = 'div3EconomicoOnDiv4DialogModeloEconomico';
+        pegaDiv4DialogModeloEconomico.appendChild(div3EconomicoOnDiv4DialogModeloEconomico);
+    };
 
-    function calculaCredito1x() {
-        const inputEconomico = document.getElementById('input-economico');
-        const retorna1x = inputEconomico.value * (3.7 / 100);
-        return retorna1x.toFixed(2);
-    }
+    function addDiv1EconomicoNaDiv5Economico() {
+        const pegaDiv5DialogModeloEconomico = document.getElementById('div5-dialog-modelo-economico');
+        const div1EconomicoOnDiv5DialogModeloEconomico = document.createElement('div');
+        div1EconomicoOnDiv5DialogModeloEconomico.textContent = '2º Parcela – 50% do valor total';
+        div1EconomicoOnDiv5DialogModeloEconomico.id = 'div1EconomicoOnDiv5DialogModeloEconomico';
+        pegaDiv5DialogModeloEconomico.appendChild(div1EconomicoOnDiv5DialogModeloEconomico);
+    };
 
-    function calculaCredito2xA12x() {
-        const inputEconomico = document.getElementById('input-economico');
-        const retorna2x12x = inputEconomico.value * (4.9 / 100);
-        return retorna2x12x.toFixed(2);
-        // Pensar aqui em utilizar uma estrutura de repetição
-    }
+    function addDiv2EconomicoNaDiv5Economico() {
+        const pegaDiv5DialogModeloEconomico = document.getElementById('div5-dialog-modelo-economico');
+        const div2EconomicoOnDiv5DialogModeloEconomico = document.createElement('div');
+        div2EconomicoOnDiv5DialogModeloEconomico.textContent = 'Para início da segunda etapa';
+        div2EconomicoOnDiv5DialogModeloEconomico.id = 'div2EconomicoOnDiv5DialogModeloEconomico';
+        pegaDiv5DialogModeloEconomico.appendChild(div2EconomicoOnDiv5DialogModeloEconomico);
+    };
+
+    function addDiv3EconomicoNaDiv5Economico() {
+        const pegaDiv5DialogModeloEconomico = document.getElementById('div5-dialog-modelo-economico');
+        const div3EconomicoOnDiv5DialogModeloEconomico = document.createElement('div');
+        div3EconomicoOnDiv5DialogModeloEconomico.textContent = `${1800/2}`;
+        div3EconomicoOnDiv5DialogModeloEconomico.id = 'div3EconomicoOnDiv5DialogModeloEconomico';
+        pegaDiv5DialogModeloEconomico.appendChild(div3EconomicoOnDiv5DialogModeloEconomico);
+    };
+}
+
+// Parte dos cálculos:
+
+function calculaDebitoEconomico() {
+    const inputEconomico = document.getElementById('input-economico');
+    // const valueDebito = document.getElementById('value-debito');
+    // const valueOfInput = parseInt(inputEconomico.value);
+    // const valueOfDebito = parseInt(valueDebito);
+    // console.log(valueOfInput * valueOfDebito)
+    const retorna = inputEconomico.value * (1.9 / 100);
+    return retorna.toFixed(2);
+}
+
+function calculaCredito1x() {
+    const inputEconomico = document.getElementById('input-economico');
+    const retorna1x = inputEconomico.value * (3.7 / 100);
+    return retorna1x.toFixed(2);
+}
+
+function calculaCredito2xA12x() {
+    const inputEconomico = document.getElementById('input-economico');
+    const retorna2x12x = inputEconomico.value * (4.9 / 100);
+    return retorna2x12x.toFixed(2);
+    // Pensar aqui em utilizar uma estrutura de repetição
+}

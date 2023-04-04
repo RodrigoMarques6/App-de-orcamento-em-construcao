@@ -227,20 +227,67 @@ input[type="number"] {
 
 }
 
-.dialog-modelo {
+.dialog-modelo-economico {
   background-color: bisque;
   margin: auto;
   border: 2px solid violet;
   border-radius: 10px;
-  width: 70%;
+  width: 60%;
   height: 90%;
 }
 
-#div4OnDialogModelo {
-  background-color: rgb(89, 136, 35);
-  width: 200px;
+.div1-dialog-modelo-economico {
+  background-color: #f1b673;
+}
+
+.div2-dialog-modelo-economico {
+  background-color: springgreen;
+}
+
+.div3-dialog-modelo-economico {
+  background-color: brown;
+}
+
+.div4-dialog-modelo-economico {
+  display: flex;
+}
+
+#div1EconomicoOnDiv4DialogModeloEconomico {
+  background-color: #ffd8b1;
+  width: 20%;
+  height: 200px;
+  
+}
+
+#div2EconomicoOnDiv4DialogModeloEconomico {
+  background-color: rgb(136, 126, 35);
+  width: 60%;
   height: 200px;
 }
+
+#div3EconomicoOnDiv4DialogModeloEconomico {
+  background-color: rgb(36, 120, 175);
+  width: 20%;
+  height: 200px;
+}
+
+.div5-dialog-modelo-economico {
+  display: flex;
+}
+
+#div1EconomicoOnDiv5DialogModeloEconomico {
+  background-color: crimson;
+}
+
+#div2EconomicoOnDiv5DialogModeloEconomico {
+  background-color: aqua;
+}
+
+#div3EconomicoOnDiv5DialogModeloEconomico {
+  background-color: rgb(129, 150, 140);
+}
+
+
 
 
 
