@@ -228,63 +228,116 @@ input[type="number"] {
 }
 
 .dialog-modelo-economico {
-  background-color: bisque;
+  /* background-color: bisque; */
   margin: auto;
   border: 2px solid violet;
   border-radius: 10px;
   width: 60%;
-  height: 90%;
+  height: 100%;
+  /* padding: 1%; */
 }
 
 .div1-dialog-modelo-economico {
   background-color: #f1b673;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  font-size: 100%;
+  margin-bottom: 1%;
+  padding: 1%;
+}
+
+span {
+  font-size: 160%;
+  font-weight: bold;
 }
 
 .div2-dialog-modelo-economico {
-  background-color: springgreen;
+  background-color: #f1b673;
+  height: 11%;
+  display: flex;
+  align-items: center;
+  font-size: 100%;
+  margin-bottom: 1%;
+  padding: 1%;
 }
 
 .div3-dialog-modelo-economico {
-  background-color: brown;
+  background-color: white;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  font-size: 100%;
+  margin-bottom: 1%;
+  padding: 1%;
+  text-align: justify;
 }
 
 .div4-dialog-modelo-economico {
   display: flex;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 0.5%;
 }
 
 #div1EconomicoOnDiv4DialogModeloEconomico {
   background-color: #ffd8b1;
   width: 20%;
-  height: 200px;
-  
+  height: 170px; /*Arrumar para % */
+  margin-right: 0.25%;
+  padding: 0.5%;
 }
 
 #div2EconomicoOnDiv4DialogModeloEconomico {
-  background-color: rgb(136, 126, 35);
+  background-color: #ffd8b1;
+  text-align: center;
+  padding: 0.5%;
   width: 60%;
-  height: 200px;
+  height: 170px; /*Arrumar para % */
+  margin-right: 0.25%;
+  margin-left: 0.25%;
 }
 
 #div3EconomicoOnDiv4DialogModeloEconomico {
-  background-color: rgb(36, 120, 175);
+  background-color: #ffd8b1;
   width: 20%;
-  height: 200px;
+  height: 170px; /*Arrumar para % */
+  margin-left: 0.25%;
+  padding: 0.5%;
 }
 
 .div5-dialog-modelo-economico {
   display: flex;
+  margin-top: 0.25%;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 0.25%;
 }
 
 #div1EconomicoOnDiv5DialogModeloEconomico {
-  background-color: crimson;
+  background-color: #ffd8b1;
+  width: 20%;
+  height: 60px; /*Arrumar para % */
+  margin-right: 0.25%;
+  padding: 0.5%;
 }
 
 #div2EconomicoOnDiv5DialogModeloEconomico {
-  background-color: aqua;
+  background-color: #ffd8b1;
+  text-align: center;
+  padding: 0.5%;
+  width: 60%;
+  height: 60px; /*Arrumar para % */
+  margin-right: 0.25%;
+  margin-left: 0.25%;
 }
 
 #div3EconomicoOnDiv5DialogModeloEconomico {
-  background-color: rgb(129, 150, 140);
+  background-color: #ffd8b1;
+  width: 20%;
+  height: 60px; /*Arrumar para % */
+  margin-left: 0.25%;
+  padding: 0.5%;
 }
 
 

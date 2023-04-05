@@ -181,19 +181,19 @@ function addButtonModelOnDialogAndAddModel() {
     function addConteudoNaDiv1Economico() {
         const div1DialogModeloEconomico = document.getElementById('div1-dialog-modelo-economico');
         const inputEconomico = document.getElementById('input-economico');
-        div1DialogModeloEconomico.innerHTML = `<p>Valor do projeto: R$ ${inputEconomico.value} Em até 10x no cartão de crédito</p>`;
+        div1DialogModeloEconomico.innerHTML = `<p>Valor do projeto: <span>R$ ${inputEconomico.value}</span> Em até 10x no cartão de crédito</p>`;
     };
 
     function addConteudoNaDiv2Economico() {
         const div2DialogModeloEconomico = document.getElementById('div2-dialog-modelo-economico');
         const inputEconomico = document.getElementById('input-economico');
-        div2DialogModeloEconomico.innerHTML = `<p>Ou ${inputEconomico.value * 0.9} à vista, com 10% de desconto já aplicado. Pago inteiro por boleto bancário ou transferência.</p>`;
+        div2DialogModeloEconomico.innerHTML = `<p>Ou <span>R$ ${inputEconomico.value * 0.9}</span> à vista, com <span>10%</span> de desconto já aplicado. Pago inteiro por boleto bancário ou transferência/pix.</p>`;
     };
 
     function addConteudoNaDiv3Economico() {
         const div3DialogModeloEconomico = document.getElementById('div3-dialog-modelo-economico');
         const inputEconomico = document.getElementById('input-economico');
-        div3DialogModeloEconomico.innerHTML = `<p>OU, se preferir, podemos optar pela realização do pagamento por boleto bancário realizado por iniciação de etapas. Nesse caso não há a opção de cartão de crédito, e o andamento do serviço só é continuado com a demonstração do comprovante de pagamento quando você puder realizá-lo. Enquanto isso, o projeto é pausado na última etapa que foi paga. A vantagem dessa modalidade é que você pode controlar o seu tempo de pagamento. O valor nesse caso ficaria por R$${inputEconomico.value * 0.95}, (com 5% de desconto já aplicado), dividido em 3 etapas/parcelas. Conforme abaixo:</p>`;
+        div3DialogModeloEconomico.innerHTML = `<p><span>OU</span>, se preferir, podemos optar pela realização do pagamento por boleto bancário realizado por iniciação de etapas. Nesse caso não há a opção de cartão de crédito, e o andamento do serviço só é continuado com a demonstração do comprovante de pagamento quando você puder realizá-lo. Enquanto isso, o projeto é pausado na última etapa que foi paga. A vantagem dessa modalidade é que você pode controlar o seu tempo de pagamento. O valor nesse caso ficaria por <span>R$ ${inputEconomico.value * 0.95}</span>, (com <span>5%</span> de desconto já aplicado), dividido em 3 etapas/parcelas. Conforme abaixo:</p>`;
     };
 
     function addDiv1EconomicoNaDiv4Economico() {
@@ -215,7 +215,7 @@ function addButtonModelOnDialogAndAddModel() {
     function addDiv3EconomicoNaDiv4Economico() {
         const pegaDiv4DialogModeloEconomico = document.getElementById('div4-dialog-modelo-economico');
         const div3EconomicoOnDiv4DialogModeloEconomico = document.createElement('div');
-        div3EconomicoOnDiv4DialogModeloEconomico.textContent = `${1800/2}`;
+        div3EconomicoOnDiv4DialogModeloEconomico.textContent = `R$ ${1800/2}`;
         div3EconomicoOnDiv4DialogModeloEconomico.id = 'div3EconomicoOnDiv4DialogModeloEconomico';
         pegaDiv4DialogModeloEconomico.appendChild(div3EconomicoOnDiv4DialogModeloEconomico);
     };
