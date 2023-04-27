@@ -20,6 +20,7 @@ function createTableOfValues() {
         addButtonModelOnDialogAndAddModel();
         calculaDebitoEconomico();
         calculaCredito1x();
+        // addTextOnTable();
     })
 };
 
@@ -39,17 +40,24 @@ function showModal() {
     dialogEconomico.showModal();
 }
 
+function addTextOnTable() {
+    const addAntesDaTable = document.getElementById('divAntesDaTable');
+    const inputEconomico = document.getElementById('input-economico');
+    addAntesDaTable.innerHTML = `<h2>Tabela válida para um projeto de R$ ${inputEconomico.value}</h2>`
+}
+
 function addTableOnDialog() {
+    addTextOnTable()
     const onDialog = document.getElementById('table-dialog-economico');
     onDialog.innerHTML = `
-    <thead>
+    <tbody>
         <th>Modalidade</th>
         <th>Taxa</th>
         <th>Desconto</th>
         <th>Receba no total</th>
         <th>Receba por mês</th>
         <th>Seu cliente paga</th>
-    </thead>
+    </tbody>
     <tbody>
         <td>Débito</td>
         <td>1,9%</td>
@@ -137,13 +145,14 @@ function addTableOnDialog() {
         <td value=""></td>
     </tbody>
     <tbody>
-    <td>Crédito (11x)</td>
+    <td>Crédito (12x)</td>
     <td>4,9%</td>
     <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
     <td value=""></td>
     <td value=""></td>
     </tbody>`;
 };
+
 
 function addButtonBackOnDialog() {
     const pegaDiv1DialogEconomico = document.getElementById('div1-dialog-economico');

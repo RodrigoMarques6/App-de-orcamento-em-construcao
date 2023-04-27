@@ -131,14 +131,14 @@ input[type="number"] {
   padding: 2%;
   border-radius: 10px;
   border: 2px solid violet;
-  width: 50vw;
-  height: 80%;
+  width: 80vw;
+  height: 90%;
   color: bisque;
   opacity: 0;
 }
 
 .table-dialog-economico {
-  border: 1px solid #8fb9aa;
+  border: 1px solid violet;
   padding: 2%;
   margin: auto;
   width: 100%;
@@ -232,7 +232,7 @@ input[type="number"] {
   margin: auto;
   border: 2px solid violet;
   border-radius: 10px;
-  width: 60%;
+  width: 70%;
   height: 100%;
   /* padding: 1%; */
 }
@@ -340,8 +340,21 @@ span {
   padding: 0.5%;
 }
 
+/* Parte da tabela */
 
+th, td {
+  border: 1px solid orange;
+  padding: 10px;
+  border-radius: 5px;
+  /* background-color: violet; */
+  border: 1px solid violet;
+  color: white;
+}
 
+#divAntesDaTable {
+  /* background-color: aqua; */
+  padding: 10px;
+}
 
 
 /* Footer */
