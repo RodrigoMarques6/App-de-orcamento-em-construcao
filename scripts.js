@@ -264,13 +264,13 @@ function calculaDebitoEconomico() {
     // const valueOfDebito = parseInt(valueDebito);
     // console.log(valueOfInput * valueOfDebito)
     const retorna = inputEconomico.value * (1.9 / 100);
-    return retorna.toFixed(2);
+    return replaceToNumbers(retorna.toFixed(2));
 }
 
 function calculaCredito1x() {
     const inputEconomico = document.getElementById('input-economico');
     const retorna1x = inputEconomico.value * (3.7 / 100);
-    return retorna1x.toFixed(2);
+    return replaceToNumbers(retorna1x.toFixed(2));
 }
 
 function calculaCredito2xA12x() {
@@ -283,7 +283,7 @@ function calculaCredito2xA12x() {
 function calculaRecebaNoTotalDebito() {
     const inputEconomico = document.getElementById('input-economico');
     const calculaRecebaNoTotalDebito = (inputEconomico.value - calculaDebitoEconomico());
-    return replaceToNumbers(calculaRecebaNoTotalDebito.toFixed(2));
+    return calculaRecebaNoTotalDebito.toFixed(2);
 }
 
 function calculaRecebaNoTotal1x() {
