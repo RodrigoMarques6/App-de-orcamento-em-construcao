@@ -49,20 +49,21 @@ function addTextOnTable() {
 function addTableOnDialog() {
     addTextOnTable()
     const onDialog = document.getElementById('table-dialog-economico');
+    
     onDialog.innerHTML = `
-    <tbody>
+    <thead>
         <th>Modalidade</th>
         <th>Taxa</th>
         <th>Desconto</th>
         <th>Receba no total</th>
         <th>Receba por mês</th>
         <th>Seu cliente paga</th>
-    </tbody>
+    </thead>
     <tbody>
         <td>Débito</td>
         <td>1,9%</td>
         <th>${calculaDebitoEconomico.innerHTML = `R$ ` + calculaDebitoEconomico()}</th>
-        <td value=""></td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$` + calculaRecebaNoTotalDebito()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -70,7 +71,7 @@ function addTableOnDialog() {
         <td>Crédito (1x)</td>
         <td>3,7%</td>
         <th>${calculaCredito1x.innerHTML = `R$ ` + calculaCredito1x()}</th>
-        <td></td>
+        <td>${calculaCredito1x.innerHTML = `R$` + calculaRecebaNoTotal1x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -78,7 +79,7 @@ function addTableOnDialog() {
         <td>Crédito (2x)</td>
         <td>4,9%</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
     </tbody>
     <tbody>
@@ -275,6 +276,29 @@ function calculaCredito1x() {
 function calculaCredito2xA12x() {
     const inputEconomico = document.getElementById('input-economico');
     const retorna2x12x = inputEconomico.value * (4.9 / 100);
-    return retorna2x12x.toFixed(2);
+    return replaceToNumbers(retorna2x12x.toFixed(2));
     // Pensar aqui em utilizar uma estrutura de repetição
+}
+
+function calculaRecebaNoTotalDebito() {
+    const inputEconomico = document.getElementById('input-economico');
+    const calculaRecebaNoTotalDebito = (inputEconomico.value - calculaDebitoEconomico());
+    return replaceToNumbers(calculaRecebaNoTotalDebito.toFixed(2));
+}
+
+function calculaRecebaNoTotal1x() {
+    const inputEconomico = document.getElementById('input-economico');
+    const calculaRecebaNoTotal1x = (inputEconomico.value - calculaCredito1x());
+    return replaceToNumbers(calculaRecebaNoTotal1x.toFixed(2));
+}
+
+function calculaRecebaNoTotal2xA12x() {
+    const inputEconomico = document.getElementById('input-economico');
+    const calculaRecebaNoTotal2xA12x = inputEconomico.value - calculaCredito2xA12x();
+    return replaceToNumbers(calculaRecebaNoTotal2xA12x.toFixed(2));
+    // VER AQUI!!!!
+}
+
+function replaceToNumbers(num) {
+    return num.replace('.', ',');
 }
