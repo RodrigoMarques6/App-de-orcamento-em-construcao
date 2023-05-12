@@ -64,7 +64,7 @@ function addTableOnDialog() {
         <td>1,9%</td>
         <th>${calculaDebitoEconomico.innerHTML = `R$ ` + calculaDebitoEconomico()}</th>
         <td>${calculaDebitoEconomico.innerHTML = `R$` + calculaRecebaNoTotalDebito()}</td>
-        <td value=""></td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$` + calculaRecebaPorMesDebito()}</td>
         <td value=""></td>
     </tbody>
     <tbody>
@@ -72,7 +72,7 @@ function addTableOnDialog() {
         <td>3,7%</td>
         <th>${calculaCredito1x.innerHTML = `R$ ` + calculaCredito1x()}</th>
         <td>${calculaCredito1x.innerHTML = `R$` + calculaRecebaNoTotal1x()}</td>
-        <td value=""></td>
+        <td>${calculaCredito1x.innerHTML = `R$` + calculaRecebaPorMesCredito1x()}</td>
         <td value=""></td>
     </tbody>
     <tbody>
@@ -81,11 +81,13 @@ function addTableOnDialog() {
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
+        <td value=""></td>
     </tbody>
     <tbody>
         <td>Crédito (3x)</td>
         <td>4,9%</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -93,6 +95,7 @@ function addTableOnDialog() {
         <td>Crédito (4x)</td>
         <td>4,9%</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -100,6 +103,7 @@ function addTableOnDialog() {
         <td>Crédito (5x)</td>
         <td>4,9%</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -107,6 +111,7 @@ function addTableOnDialog() {
         <td>Crédito (6x)</td>
         <td>4,9%</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -114,6 +119,7 @@ function addTableOnDialog() {
         <td>Crédito (7x)</td>
         <td>4,9%</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -121,6 +127,7 @@ function addTableOnDialog() {
         <td>Crédito (8x)</td>
         <td>4,9%</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -128,6 +135,7 @@ function addTableOnDialog() {
         <td>Crédito (9x)</td>
         <td>4,9%</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -135,6 +143,7 @@ function addTableOnDialog() {
         <td>Crédito (10x)</td>
         <td>4,9%</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -142,6 +151,7 @@ function addTableOnDialog() {
         <td>Crédito (11x)</td>
         <td>4,9%</td>
         <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
         <td value=""></td>
         <td value=""></td>
     </tbody>
@@ -149,6 +159,7 @@ function addTableOnDialog() {
     <td>Crédito (12x)</td>
     <td>4,9%</td>
     <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
+    <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
     <td value=""></td>
     <td value=""></td>
     </tbody>`;
@@ -264,19 +275,19 @@ function calculaDebitoEconomico() {
     // const valueOfDebito = parseInt(valueDebito);
     // console.log(valueOfInput * valueOfDebito)
     const retorna = inputEconomico.value * (1.9 / 100);
-    return replaceToNumbers(retorna.toFixed(2));
+    return retorna.toFixed(2);
 }
 
 function calculaCredito1x() {
     const inputEconomico = document.getElementById('input-economico');
     const retorna1x = inputEconomico.value * (3.7 / 100);
-    return replaceToNumbers(retorna1x.toFixed(2));
+    return retorna1x.toFixed(2);
 }
 
 function calculaCredito2xA12x() {
     const inputEconomico = document.getElementById('input-economico');
     const retorna2x12x = inputEconomico.value * (4.9 / 100);
-    return replaceToNumbers(retorna2x12x.toFixed(2));
+    return retorna2x12x.toFixed(2);
     // Pensar aqui em utilizar uma estrutura de repetição
 }
 
@@ -294,11 +305,26 @@ function calculaRecebaNoTotal1x() {
 
 function calculaRecebaNoTotal2xA12x() {
     const inputEconomico = document.getElementById('input-economico');
-    const calculaRecebaNoTotal2xA12x = inputEconomico.value - calculaCredito2xA12x();
+    const calculaRecebaNoTotal2xA12x = (inputEconomico.value - calculaCredito2xA12x());
     return replaceToNumbers(calculaRecebaNoTotal2xA12x.toFixed(2));
     // VER AQUI!!!!
+}
+
+function calculaRecebaPorMesDebito() {
+    const inputEconomico = document.getElementById('input-economico');
+    const calculaRecebaPorMesDebito = (inputEconomico.value - calculaDebitoEconomico());
+    return calculaRecebaPorMesDebito.toFixed(2);
+}
+
+function calculaRecebaPorMesCredito1x() {
+    const inputEconomico = document.getElementById('input-economico');
+    const calculaRecebaPorMesCredito1x = (inputEconomico.value - calculaCredito1x());
+    return calculaRecebaPorMesCredito1x.toFixed(2);
 }
 
 function replaceToNumbers(num) {
     return num.replace('.', ',');
 }
+
+
+//A genete pode pegar o RECEBA NO TOTAL e simplesmente dividir pela quantidade de meses, pode ficar mais fácil
