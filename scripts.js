@@ -57,111 +57,111 @@ function addTableOnDialog() {
         <th>Desconto</th>
         <th>Receba no total</th>
         <th>Receba por mês</th>
-        <th>Seu cliente paga</th>
+        <th>Cliente paga por mês</th>
     </thead>
     <tbody>
         <td>Débito</td>
         <td>1,9%</td>
         <th>${calculaDebitoEconomico.innerHTML = `R$ ` + calculaDebitoEconomico()}</th>
-        <td>${calculaDebitoEconomico.innerHTML = `R$` + calculaRecebaNoTotalDebito()}</td>
-        <td>${calculaDebitoEconomico.innerHTML = `R$` + calculaRecebaPorMesDebito()}</td>
-        <td value=""></td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + calculaRecebaNoTotalDebito()}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (calculaRecebaNoTotalDebito() / 1).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 1).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (1x)</td>
         <td>3,7%</td>
         <th>${calculaCredito1x.innerHTML = `R$ ` + calculaCredito1x()}</th>
-        <td>${calculaCredito1x.innerHTML = `R$` + calculaRecebaNoTotal1x()}</td>
-        <td>${calculaCredito1x.innerHTML = `R$` + calculaRecebaPorMesCredito1x()}</td>
-        <td value=""></td>
+        <td>${calculaCredito1x.innerHTML = `R$ ` + calculaRecebaNoTotal1x()}</td>
+        <td>${calculaCredito1x.innerHTML = `R$ ` + (calculaRecebaNoTotal1x() / 1).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 1).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (2x)</td>
         <td>4,9%</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaRecebaNoTotal2xA12x()}</td>
-        <td value=""></td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaRecebaNoTotal2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 2).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 2).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (3x)</td>
         <td>4,9%</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
-        <td value=""></td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS ` + calculaRecebaNoTotal2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 3).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 3).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (4x)</td>
         <td>4,9%</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
-        <td value=""></td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS ` + calculaRecebaNoTotal2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 4).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 4).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (5x)</td>
         <td>4,9%</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
-        <td value=""></td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS ` + calculaRecebaNoTotal2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 5).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 5).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (6x)</td>
         <td>4,9%</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
-        <td value=""></td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS ` + calculaRecebaNoTotal2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 6).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 6).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (7x)</td>
         <td>4,9%</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
-        <td value=""></td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS ` + calculaRecebaNoTotal2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 7).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 7).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (8x)</td>
         <td>4,9%</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
-        <td value=""></td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS ` + calculaRecebaNoTotal2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 8).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 8).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (9x)</td>
         <td>4,9%</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
-        <td value=""></td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS ` + calculaRecebaNoTotal2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 9).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 9).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (10x)</td>
         <td>4,9%</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
-        <td value=""></td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS ` + calculaRecebaNoTotal2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 10).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 10).toFixed(2)}</td>
     </tbody>
     <tbody>
         <td>Crédito (11x)</td>
         <td>4,9%</td>
-        <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-        <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
-        <td value=""></td>
-        <td value=""></td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `RS ` + calculaRecebaNoTotal2xA12x()}</td>
+        <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 11).toFixed(2)}</td>
+        <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 11).toFixed(2)}</td>
     </tbody>
     <tbody>
     <td>Crédito (12x)</td>
     <td>4,9%</td>
-    <td>${calculaCredito2xA12x.innerHTML = `R$` + calculaCredito2xA12x()}</td>
-    <td>${calculaCredito2xA12x.innerHTML = `RS` + calculaRecebaNoTotal2xA12x()}</td>
-    <td value=""></td>
-    <td value=""></td>
+    <td>${calculaCredito2xA12x.innerHTML = `R$ ` + calculaCredito2xA12x()}</td>
+    <td>${calculaCredito2xA12x.innerHTML = `RS ` + calculaRecebaNoTotal2xA12x()}</td>
+    <td>${calculaCredito2xA12x.innerHTML = `R$ ` + (calculaRecebaNoTotal2xA12x() / 12).toFixed(2)}</td>
+    <td>${calculaDebitoEconomico.innerHTML = `R$ ` + (valueInputEconomico() / 12).toFixed(2)}</td>
     </tbody>`;
 };
 
@@ -288,7 +288,6 @@ function calculaCredito2xA12x() {
     const inputEconomico = document.getElementById('input-economico');
     const retorna2x12x = inputEconomico.value * (4.9 / 100);
     return retorna2x12x.toFixed(2);
-    // Pensar aqui em utilizar uma estrutura de repetição
 }
 
 function calculaRecebaNoTotalDebito() {
@@ -300,31 +299,21 @@ function calculaRecebaNoTotalDebito() {
 function calculaRecebaNoTotal1x() {
     const inputEconomico = document.getElementById('input-economico');
     const calculaRecebaNoTotal1x = (inputEconomico.value - calculaCredito1x());
-    return replaceToNumbers(calculaRecebaNoTotal1x.toFixed(2));
+    return calculaRecebaNoTotal1x.toFixed(2);
 }
 
 function calculaRecebaNoTotal2xA12x() {
     const inputEconomico = document.getElementById('input-economico');
     const calculaRecebaNoTotal2xA12x = (inputEconomico.value - calculaCredito2xA12x());
-    return replaceToNumbers(calculaRecebaNoTotal2xA12x.toFixed(2));
+    return calculaRecebaNoTotal2xA12x.toFixed(2);
     // VER AQUI!!!!
 }
 
-function calculaRecebaPorMesDebito() {
+function valueInputEconomico() {
     const inputEconomico = document.getElementById('input-economico');
-    const calculaRecebaPorMesDebito = (inputEconomico.value - calculaDebitoEconomico());
-    return calculaRecebaPorMesDebito.toFixed(2);
-}
-
-function calculaRecebaPorMesCredito1x() {
-    const inputEconomico = document.getElementById('input-economico');
-    const calculaRecebaPorMesCredito1x = (inputEconomico.value - calculaCredito1x());
-    return calculaRecebaPorMesCredito1x.toFixed(2);
+    return inputEconomico.value
 }
 
 function replaceToNumbers(num) {
     return num.replace('.', ',');
 }
-
-
-//A genete pode pegar o RECEBA NO TOTAL e simplesmente dividir pela quantidade de meses, pode ficar mais fácil
