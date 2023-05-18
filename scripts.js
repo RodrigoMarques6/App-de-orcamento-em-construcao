@@ -21,16 +21,14 @@ function createTableOfValues() {
         calculaDebitoEconomico();
         calculaCredito1x();
         // addTextOnTable();
+
     })
 };
 
-
 setTimeout(() => {
-    createTableOfValues();
+    createTableOfValues()
 
-}, 1000);
-
-
+}, 2000);
 
 function animation() {
     dialogEconomico.classList.toggle('animar')
@@ -270,10 +268,6 @@ function addButtonModelOnDialogAndAddModel() {
 
 function calculaDebitoEconomico() {
     const inputEconomico = document.getElementById('input-economico');
-    // const valueDebito = document.getElementById('value-debito');
-    // const valueOfInput = parseInt(inputEconomico.value);
-    // const valueOfDebito = parseInt(valueDebito);
-    // console.log(valueOfInput * valueOfDebito)
     const retorna = inputEconomico.value * (1.9 / 100);
     return retorna.toFixed(2);
 }
@@ -306,7 +300,6 @@ function calculaRecebaNoTotal2xA12x() {
     const inputEconomico = document.getElementById('input-economico');
     const calculaRecebaNoTotal2xA12x = (inputEconomico.value - calculaCredito2xA12x());
     return calculaRecebaNoTotal2xA12x.toFixed(2);
-    // VER AQUI!!!!
 }
 
 function valueInputEconomico() {

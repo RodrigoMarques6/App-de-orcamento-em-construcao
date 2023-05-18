@@ -170,6 +170,7 @@ input[type="number"] {
   margin: 0 auto;
   color: violet;
   animation: load 2s;
+  display: none;
 }
 
 @keyframes load {
