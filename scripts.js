@@ -12,23 +12,34 @@ const dialogEconomico = document.getElementById('dialog-economico')
 
 
 function createTableOfValues() {
-    btnEconomico.addEventListener('click', function () {
-        showModal();
-        animation();
-        addTableOnDialog();
-        addButtonBackOnDialog();
-        addButtonModelOnDialogAndAddModel();
-        calculaDebitoEconomico();
-        calculaCredito1x();
-        // addTextOnTable();
-
-    })
+    
+        btnEconomico.addEventListener('click', function () {
+            setInterval(() => {
+            showModal();
+            animation();
+            addTableOnDialog();
+            addButtonBackOnDialog();
+            addButtonModelOnDialogAndAddModel();
+            calculaDebitoEconomico();
+            calculaCredito1x();
+            // addTextOnTable();
+        }, 3000)
+        })
 };
+/*
+setInterval(() => {
+    showModal();
+    animation();
+}, 2000)
+*/
+createTableOfValues()
 
+/*
 setTimeout(() => {
     createTableOfValues()
 
 }, 2000);
+*/
 
 function animation() {
     dialogEconomico.classList.toggle('animar')
