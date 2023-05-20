@@ -12,10 +12,12 @@ const dialogEconomico = document.getElementById('dialog-economico')
 
 
 function createTableOfValues() {
-    
+        
+            
         btnEconomico.addEventListener('click', function () {
-            setInterval(() => {
-            showModal();
+            // loadAnimation()
+            setTimeout(() => {
+            modalShow();
             animation();
             addTableOnDialog();
             addButtonBackOnDialog();
@@ -23,31 +25,25 @@ function createTableOfValues() {
             calculaDebitoEconomico();
             calculaCredito1x();
             // addTextOnTable();
-        }, 3000)
+        }, 2000)
         })
 };
-/*
-setInterval(() => {
-    showModal();
-    animation();
-}, 2000)
-*/
+
 createTableOfValues()
 
-/*
-setTimeout(() => {
-    createTableOfValues()
-
-}, 2000);
-*/
 
 function animation() {
-    dialogEconomico.classList.toggle('animar')
+    dialogEconomico.classList.toggle('animar');
 }
 
-function showModal() {
+function modalShow() {
     dialogEconomico.showModal();
 }
+
+// function loadAnimation() {
+//     const load = document.getElementById('load');
+//     load.classList.add('loader')
+// }
 
 function addTextOnTable() {
     const addAntesDaTable = document.getElementById('divAntesDaTable');

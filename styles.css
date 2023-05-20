@@ -161,7 +161,7 @@ input[type="number"] {
   }
 }
 
-#load {
+.loader {
   width: 40px;
   height: 40px;
   border: 10px solid;
@@ -170,7 +170,8 @@ input[type="number"] {
   margin: 0 auto;
   color: violet;
   animation: load 2s;
-  display: none;
+  /* display: none; */
+
 }
 
 @keyframes load {
